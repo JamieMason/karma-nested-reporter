@@ -1,0 +1,33 @@
+{
+  "name": "karma-nested-reporter",
+  "version": "0.1.0",
+  "description": "A Karma plugin. Report results with each describe indented.",
+  "author": "Jamie Mason, @fold_left",
+  "homepage": "https://github.com/JamieMason/karma-nested-reporter",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:JamieMason/karma-nested-reporter.git"
+  },
+  "keywords": [
+    "jasmine",
+    "karma-plugin",
+    "karma-reporter",
+    "mocha",
+    "nested",
+    "testing",
+  ],
+  "bugs": {
+    "url": "https://github.com/JamieMason/karma-nested-reporter/issues"
+  },
+  "peerDependencies": {
+    "karma": ">=0.9"
+  },
+  "dependencies": {
+    "colors": "~0.6.2"
+  }
+}
