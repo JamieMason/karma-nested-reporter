@@ -1,8 +1,6 @@
 # karma-nested-reporter
 
-> A Karma plugin. Report results with each describe indented.
-
-![screenshot](https://raw.github.com/JamieMason/karma-nested-reporter/master/karma-nested-reporter.png)
+> A Karma plugin. Report results with each describe indented ([screenshot](https://github.com/JamieMason/karma-nested-reporter/blob/master/karma-nested-reporter.png)).
 
 ## Installation
 
