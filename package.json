@@ -19,7 +19,7 @@
     "karma-reporter",
     "mocha",
     "nested",
-    "testing",
+    "testing"
   ],
   "bugs": {
     "url": "https://github.com/JamieMason/karma-nested-reporter/issues"
