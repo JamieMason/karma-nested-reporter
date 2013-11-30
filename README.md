@@ -21,13 +21,15 @@ You can simply do it with:
 npm install karma-nested-reporter --save-dev
 ```
 
-## Configuration
+## Enabling this reporter
+
+It's recommended that you use this reporter **instead of** the `progress` reporter.
 
 ```js
 // karma.conf.js
 module.exports = function(config) {
   config.set({
-    reporters: ['nested'],
+    reporters: ['nested']
   });
 };
 ```
@@ -37,6 +39,43 @@ You can pass list of reporters as a CLI argument too:
 ```bash
 karma start --reporters nested
 ```
+
+## Optional Configuration
+
+### Default values
+
+```js
+// karma.conf.js
+module.exports = function(config) {
+  config.set({
+    nestedReporter: {
+      color: {
+        should: 'red',
+        browser: 'yellow'
+      },
+      icon: {
+        failure: '✘ ',
+        indent: 'ட ',
+        browser: ''
+      }
+    }
+  });
+};
+```
+
+### Colors
+
+This reporter will output in color if `colors: true` is present in your Karma configuration.
+
+Colors can be optionally overridden with any of the values defined by
+[colors.js' colors and styles](https://github.com/marak/colors.js/#colors-and-styles).
+
+### Icons
+
+If the **✘** for example isn't your thing, or it doesn't display in your Terminal, this and the
+other icons can be substituted for others.
+
+## The Karma Test Runner
 
 For more information on Karma see the [homepage](http://karma-runner.github.com).
 
