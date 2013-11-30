@@ -1,6 +1,6 @@
 {
   "name": "karma-nested-reporter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Karma plugin. Report results with each describe indented.",
   "author": "Jamie Mason, @fold_left",
   "homepage": "https://github.com/JamieMason/karma-nested-reporter",
