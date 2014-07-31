@@ -36,6 +36,7 @@ function NestedReporter(extendBaseReporter, formatError, config, options) {
   }
 
   self.onBrowserComplete = function() {
+    self.write('\n');
     self.write(self._refresh());
   };
 
