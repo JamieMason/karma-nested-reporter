@@ -1,6 +1,6 @@
 {
   "name": "karma-nested-reporter",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Easier to read test output with nested describe and it blocks.",
   "author": "Jamie Mason, @fold_left",
   "homepage": "https://github.com/JamieMason/karma-nested-reporter",
