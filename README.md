@@ -2,10 +2,10 @@
 
 > A Karma plugin. Report results with each describe indented.
 
-[![npm downloads](https://img.shields.io/npm/dm/karma-nested-reporter.svg?style=flat-square)](https://www.npmjs.com/package/karma-nested-reporter) 
+[![npm downloads](https://img.shields.io/npm/dm/karma-nested-reporter.svg?style=flat-square)](https://www.npmjs.com/package/karma-nested-reporter)
 [![Analytics](https://ga-beacon.appspot.com/UA-45466560-5/karma-nested-reporter?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
-[![GitHub stars](https://img.shields.io/github/stars/JamieMason/karma-nested-reporter.svg?style=social&label=Star)](https://github.com/JamieMason/karma-nested-reporter) 
-[![GitHub followers](https://img.shields.io/github/followers/JamieMason.svg?style=social&label=Follow)](https://github.com/JamieMason) 
+[![GitHub stars](https://img.shields.io/github/stars/JamieMason/karma-nested-reporter.svg?style=social&label=Star)](https://github.com/JamieMason/karma-nested-reporter)
+[![GitHub followers](https://img.shields.io/github/followers/JamieMason.svg?style=social&label=Follow)](https://github.com/JamieMason)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/JamieMason/karma-nested-reporter.svg?style=social)](https://twitter.com/intent/tweet?text=Easy%20to%20read%20test%20output%20with%20nested%20describe%20and%20it%20blocks.%20%23JavaScript%20%23NodeJS&url=https%3A%2F%2Fgithub.com%2FJamieMason%2Fkarma-nested-reporter)
 
 ![screenshot of karma nested reporter](https://github.com/JamieMason/karma-nested-reporter/blob/master/karma-nested-reporter.png)
@@ -17,15 +17,15 @@ The easiest way is to keep `karma-nested-reporter` as a devDependency in your `p
 ```json
 {
   "devDependencies": {
-    "karma": "~0.10",
-    "karma-nested-reporter": "~0.1"
+    "karma": ">=0.9",
+    "karma-nested-reporter": "0.1.5"
   }
 }
 ```
 
 You can simply do it with:
 
-```bash
+```
 npm install karma-nested-reporter --save-dev
 ```
 
@@ -76,7 +76,7 @@ module.exports = function(config) {
 This reporter will output in color if `colors: true` is present in your Karma configuration.
 
 Colors can be optionally overridden with any of the values defined by
-[colors.js' colors and styles](https://github.com/marak/colors.js/#colors-and-styles).
+[chalk's colors and styles](https://github.com/chalk/chalk).
 
 ### Icons
 
@@ -86,4 +86,3 @@ other icons can be substituted for others.
 ## The Karma Test Runner
 
 For more information on Karma see the [homepage](http://karma-runner.github.com).
-

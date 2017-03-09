@@ -1,3 +1,4 @@
+var chalk = require('chalk');
 var util = require('util');
 
 function NestedReporter(extendBaseReporter, formatError, config, options) {
@@ -20,19 +21,18 @@ function NestedReporter(extendBaseReporter, formatError, config, options) {
   options.color.browser = options.color.browser || 'yellow';
 
   if (config.colors) {
-    require('colors');
     self.USE_COLORS = true;
-    self.LOG_SINGLE_BROWSER = '%s: ' + '%s'.cyan + '\n';
-    self.LOG_MULTI_BROWSER = '%s %s: ' + '%s'.cyan + '\n';
-    self.SPEC_FAILURE = '%s %s FAILED'.red + '\n';
-    self.SPEC_SLOW = '%s SLOW %s: %s'.yellow + '\n';
-    self.ERROR = '%s ERROR'.red + '\n';
-    self.FINISHED_ERROR = ' ERROR'.red;
-    self.FINISHED_SUCCESS = ' SUCCESS'.green;
-    self.FINISHED_DISCONNECTED = ' DISCONNECTED'.red;
-    self.X_FAILED = ' (%d FAILED)'.red;
-    self.TOTAL_SUCCESS = 'TOTAL: %d SUCCESS'.green + '\n';
-    self.TOTAL_FAILED = 'TOTAL: %d FAILED, %d SUCCESS'.red + '\n';
+    self.LOG_SINGLE_BROWSER = '%s: ' + chalk.cyan('%s') + '\n';
+    self.LOG_MULTI_BROWSER = '%s %s: ' + chalk.cyan('%s') + '\n';
+    self.SPEC_FAILURE = chalk.red('%s %s FAILED') + '\n';
+    self.SPEC_SLOW = chalk.yellow('%s SLOW %s: %s') + '\n';
+    self.ERROR = chalk.red('%s ERROR') + '\n';
+    self.FINISHED_ERROR = chalk.red(' ERROR');
+    self.FINISHED_SUCCESS = chalk.green(' SUCCESS');
+    self.FINISHED_DISCONNECTED = chalk.red(' DISCONNECTED');
+    self.X_FAILED = chalk.red(' (%d FAILED)');
+    self.TOTAL_SUCCESS = chalk.green('TOTAL: %d SUCCESS') + '\n';
+    self.TOTAL_FAILED = chalk.red('TOTAL: %d FAILED, %d SUCCESS') + '\n';
   }
 
   self.onBrowserComplete = function() {
