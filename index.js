@@ -2,7 +2,6 @@ var chalk = require('chalk');
 var util = require('util');
 
 function NestedReporter(extendBaseReporter, formatError, config, options) {
-
   var self = this;
 
   extendBaseReporter(self);
@@ -57,13 +56,17 @@ function NestedReporter(extendBaseReporter, formatError, config, options) {
     var depth = result.suite.length;
     return self._super.specFailure.call(self, browser, {
       log: result.log,
-      description: '\n' + self._repeat(depth, '  ') + options.icon.indent + options.icon.failure + result.description,
+      description:
+        '\n' +
+        self._repeat(depth, '  ') +
+        options.icon.indent +
+        options.icon.failure +
+        result.description,
       suite: result.suite.map(function(description, i) {
         return '\n' + self._repeat(i, '  ') + options.icon.indent + description;
       })
     });
   };
-
 }
 
 NestedReporter.prototype._repeat = function(n, str) {
@@ -99,7 +102,12 @@ NestedReporter.prototype._refresh = function() {
 // Register with Karma
 // ---------------------------------------------------------------------------
 
-NestedReporter.$inject = ['baseReporterDecorator', 'formatError', 'config', 'config.nestedReporter'];
+NestedReporter.$inject = [
+  'baseReporterDecorator',
+  'formatError',
+  'config',
+  'config.nestedReporter'
+];
 
 module.exports = {
   'reporter:nested': ['type', NestedReporter]
