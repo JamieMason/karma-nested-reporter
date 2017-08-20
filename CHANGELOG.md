@@ -1,5 +1,15 @@
+<a name="0.1.6"></a>
+## [0.1.6](https://github.com/JamieMason/karma-nested-reporter/compare/0.1.5...0.1.6) (2017-08-20)
+
+
+### Bug Fixes
+
+* **npm:** update dependencies ([04e075c](https://github.com/JamieMason/karma-nested-reporter/commit/04e075c))
+
+
+
 <a name="0.1.5"></a>
-## [0.1.5](https://github.com/JamieMason/karma-nested-reporter/compare/0.1.4...v0.1.5) (2017-03-09)
+## [0.1.5](https://github.com/JamieMason/karma-nested-reporter/compare/0.1.4...0.1.5) (2017-03-09)
 
 
 ### Bug Fixes
